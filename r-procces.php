@@ -53,7 +53,7 @@ if (isset($_POST['submitr'])) {
     $opmerking = $_POST['opmerking'];
     $allergien = $_POST['allergien'];
 
-    $postR->updatePost($naam, $datum, $tijd, $telefoon, $email, $aantal, $tafel, $jarig, $opmerking, $allergien, $id,);
+    $postR->updatePost($naam, $datum, $tijd, $telefoon, $email, $aantal, $tafel, $jarig, $opmerking, $allergien, $id);
 
     header("location: r-medewerker.php?status=updated");
 }
@@ -70,7 +70,7 @@ if (isset($_POST["exportm"])) {
     if (mysqli_num_rows($result) > 0) {
         $output .= '
         <table class="table" bordered="1">  
-        <h3>Boeking klaten</h3>
+        <h3>Boeking klanten</h3>
         <thead>
         <tr>
         <th>Datum</th>
@@ -92,7 +92,7 @@ if (isset($_POST["exportm"])) {
         <td>' . $row['datum'] . '</td>
         <td>' . $row['tijd'] . '</td>
         <td>' . $row['tafel'] . '</td>
-        <td>' . $row['klatnaam'] . '</td>
+        <td>' . $row['klantnaam'] . '</td>
         <td>' . $row['email'] . '</td>
         <td>' . $row['telefoon'] . '</td>
         <td>' . $row['aantal'] . '</td>
@@ -149,7 +149,7 @@ if (isset($_POST["exportk"])) {
         <td>' . $row['datum'] . '</td>
         <td>' . $row['tijd'] . '</td>
         <td>' . $row['tafel'] . '</td>
-        <td>' . $row['klatnaam'] . '</td>
+        <td>' . $row['klantnaam'] . '</td>
         <td>' . $row['email'] . '</td>
         <td>' . $row['telefoon'] . '</td>
         <td>' . $row['aantal'] . '</td>

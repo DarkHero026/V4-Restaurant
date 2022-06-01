@@ -34,7 +34,7 @@ if (isset($_POST['submit_eten'])) {
     $naam_eten = $_POST['naam_eten'];
     $prijs_eten = $_POST['prijs_eten'];
 
-    $postM->updatePostEten($naam_eten, $prijs_eten);
+    $postM->updatePostEten($naam_eten, $prijs_eten, $id);
 
     header("location: m-medewerker.php?status=updated");
 } else if (isset($_POST['updateD'])) {
@@ -43,7 +43,7 @@ if (isset($_POST['submit_eten'])) {
     $naam_drank = $_POST['naam_drank'];
     $prijs_drank = $_POST['prijs_drank'];
 
-    $postM->updatePostDrank($naam_drank, $prijs_drank);
+    $postM->updatePostDrank($naam_drank, $prijs_drank, $id);
 
     header("location: m-medewerker.php?status=updated");
 }
